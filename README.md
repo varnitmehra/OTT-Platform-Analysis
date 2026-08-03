@@ -1,175 +1,468 @@
-# 🎬 OTT Platform Data Analysis using MySQL & Python
+# 🎬 IMDB & OTT Platform Analytics using Power BI, MySQL & Python
 
-## 📌 Project Overview
+<p align="center">
 
-This project analyzes an **OTT (Over-the-Top) streaming platform** dataset using **MySQL** and **Python** to uncover valuable business insights about user behavior, movie performance, and viewing patterns.
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)
 
-The project demonstrates how SQL queries and Python-based data analysis can be combined to transform raw data into actionable insights through data visualization and exploratory analysis.
-
----
-
-## 🎯 Objectives
-
-* Analyze OTT platform user behavior.
-* Perform Exploratory Data Analysis (EDA) on users, movies, and watch history.
-* Execute SQL queries to solve real-world business problems.
-* Visualize insights using Python libraries.
-* Understand customer engagement and content performance.
+</p>
 
 ---
 
-## 📂 Dataset
+# 📌 Project Overview
 
-The project uses three datasets:
+This project demonstrates an end-to-end Business Intelligence workflow by combining **Python**, **MySQL**, and **Power BI** to analyze IMDb movie data and OTT platform user behavior.
 
-| Dataset               | Description                                                                        |
-| --------------------- | ---------------------------------------------------------------------------------- |
-| **Users.csv**         | Contains user information such as age, gender, country, and subscription plan.     |
-| **Movies.csv**        | Contains movie details including title, genre, language, IMDb rating, and revenue. |
-| **Watch_History.csv** | Stores user watch history, including watched movies and watch time.                |
+The project covers every stage of the analytics lifecycle:
 
----
+- Data Collection
+- Data Cleaning
+- Data Preprocessing
+- Database Management
+- SQL Analysis
+- Data Modeling
+- Dashboard Development
+- Business Insights
+- Decision Making
 
-## 🛠️ Technologies Used
-
-* Python
-* MySQL 8.0
-* Jupyter Notebook / JupyterLab
-* Pandas
-* NumPy
-* SQLAlchemy
-* PyMySQL
-* Matplotlib
+The objective is to transform raw entertainment data into meaningful business insights that help understand movie performance, user engagement, and platform growth.
 
 ---
 
-## 📊 Project Workflow
+# 🎯 Business Problem
 
-### 1. Database Connection
+Streaming platforms generate enormous amounts of data every day.
 
-* Connected Python with MySQL using SQLAlchemy.
-* Retrieved data directly from the MySQL database.
+Business teams need answers to questions like:
 
-### 2. Data Loading
+- Which genres perform the best?
+- Which movies receive the highest ratings?
+- What content keeps users engaged?
+- Which users are the most active?
+- What factors influence movie popularity?
+- How can recommendations improve user retention?
 
-* Imported Users, Movies, and Watch History tables into Pandas DataFrames.
-
-### 3. Data Exploration
-
-Performed:
-
-* Dataset overview
-* Data inspection
-* Missing value analysis
-* Data quality checks
-
-### 4. Exploratory Data Analysis (EDA)
-
-Visualized and analyzed:
-
-* Gender Distribution
-* Age Distribution
-* Country-wise User Distribution
-* Subscription Plan Distribution
-* Movie Genre Distribution
-* Language Distribution
-* IMDb Rating Distribution
-* Revenue Distribution
-
-### 5. Business Insights using SQL & Python
-
-The project answers several business questions, including:
-
-* Which movie genres are watched the most?
-* Which subscription plan has the highest average watch time?
-* Which countries have the highest average watch time?
-* What are the Top 10 most watched movies?
-* Do higher IMDb ratings lead to higher revenue?
+This project answers these questions using Business Intelligence techniques.
 
 ---
 
-## 📈 Key Features
+# 🛠 Technologies Used
 
-* MySQL database integration
-* SQL JOIN operations
-* Aggregate SQL queries
-* Exploratory Data Analysis (EDA)
-* Business intelligence reporting
-* Data visualization using Matplotlib
-* Clean and well-structured Jupyter Notebook workflow
+| Technology | Purpose |
+|------------|----------|
+| Python | Data Cleaning & Preprocessing |
+| Pandas | Data Manipulation |
+| NumPy | Numerical Operations |
+| MySQL | Data Storage |
+| SQL | Business Queries |
+| SQLAlchemy | Database Connection |
+| Jupyter Notebook | Analysis |
+| Power BI | Dashboard Creation |
+| Excel | Intermediate Dataset |
+| GitHub | Version Control |
 
 ---
 
-## 🚀 Installation
+# 📂 Project Structure
 
-Clone the repository:
+```
+IMDB-OTT-Analysis/
 
-```bash
-git clone https://github.com/<your-username>/OTT-Platform-Data-Analysis.git
-cd OTT-Platform-Data-Analysis
+│
+├── Dataset/
+│     ├── movies.csv
+│     ├── users.csv
+│     ├── watch_history.csv
+│
+├── Notebook/
+│     ├── IMDB_Movie_Analysis_With_Power_BI.ipynb
+│     ├── OTT_file.ipynb
+│
+├── Power BI/
+│     └── OTT_Analysis.pbix
+│
+├── Images/
+│
+├── README.md
+│
+└── LICENSE
 ```
 
-Install the required libraries:
+---
 
-```bash
-pip install pandas numpy sqlalchemy pymysql matplotlib
+# 📊 Dataset Description
+
+The project uses three primary datasets.
+
+## 1. Movies Dataset
+
+Contains movie-related information such as
+
+- Movie Title
+- Genre
+- Director
+- Duration
+- Language
+- Budget
+- Gross Collection
+- IMDb Score
+- Facebook Likes
+- Reviews
+- Release Year
+
+---
+
+## 2. Users Dataset
+
+Contains information about OTT users.
+
+Examples include
+
+- User ID
+- User Name
+- Country
+- Gender
+- Subscription Details
+
+---
+
+## 3. Watch History
+
+Stores user viewing activity.
+
+Includes
+
+- User ID
+- Movie ID
+- Watch Duration
+- Watch Date
+- Ratings
+
+---
+
+# 🧹 Data Preprocessing
+
+Python was used for preprocessing before visualization.
+
+Major preprocessing steps include
+
+✔ Missing Value Handling
+
+✔ Duplicate Removal
+
+✔ Data Type Conversion
+
+✔ Null Value Treatment
+
+✔ Feature Cleaning
+
+✔ Dataset Validation
+
+✔ Data Consistency Checks
+
+---
+
+# 🐍 Python Libraries
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import sqlalchemy
+import pymysql
 ```
 
-Configure your MySQL credentials in the notebook before running the project.
+---
+
+# 🗄 Database Design
+
+The cleaned datasets were imported into **MySQL**.
+
+Tables
+
+- users
+- movies
+- watch_history
+
+Relationships were created using primary and foreign keys to enable efficient SQL analysis.
 
 ---
 
-## ▶️ How to Run
+# 📈 SQL Analysis
 
-1. Create the MySQL database.
-2. Import the CSV files into MySQL.
-3. Update the database connection details in the notebook.
-4. Open the notebook in Jupyter Notebook or JupyterLab.
-5. Run all cells sequentially.
+Business questions answered using SQL include:
+
+- Total Users
+- Total Movies
+- Most Popular Movies
+- Top Rated Movies
+- Most Active Users
+- Watch Frequency
+- Genre Popularity
+- Monthly Activity
+- Average Ratings
+- Movie Performance
 
 ---
 
-## 📁 Repository Structure
+# 📊 Power BI Dashboard
+
+The Power BI dashboard transforms raw data into interactive visualizations.
+
+Dashboard includes:
+
+### Executive Summary
+
+- Total Movies
+- Total Users
+- Total Watch Records
+- Average IMDb Rating
+
+---
+
+### Movie Analysis
+
+- Genre Distribution
+- Top Rated Movies
+- Revenue Analysis
+- Budget Analysis
+- Runtime Analysis
+
+---
+
+### User Analysis
+
+- User Growth
+- Active Users
+- Country Distribution
+- Gender Distribution
+
+---
+
+### Watch History
+
+- Viewing Trends
+- Most Watched Movies
+- Monthly Activity
+- Daily Engagement
+
+---
+
+### Interactive Filters
+
+Users can filter dashboard using
+
+- Genre
+- Year
+- Country
+- Rating
+- Language
+
+---
+
+# 📊 Key Performance Indicators (KPIs)
+
+The dashboard tracks
+
+- Total Movies
+- Total Users
+- Average IMDb Rating
+- Total Watch Records
+- Average Watch Time
+- Highest Rated Movie
+- Most Popular Genre
+- Top User
+- Revenue
+- User Growth
+
+---
+
+# 📌 Business Insights
+
+Some business insights generated include:
+
+- High-rated movies generally receive greater audience engagement.
+- User watch behavior varies significantly across genres.
+- Popular genres attract more consistent viewing activity.
+- User engagement trends help identify retention opportunities.
+- Dashboard filters enable detailed performance comparisons.
+
+---
+
+# 📉 Analytics Workflow
 
 ```text
-OTT-Platform-Data-Analysis/
-│
-├── OTT_file.ipynb
-├── Users.csv
-├── Movies.csv
-├── Watch_History.csv
-├── README.md
-└── requirements.txt
+Raw Dataset
+      │
+      ▼
+Python Data Cleaning
+      │
+      ▼
+Data Preprocessing
+      │
+      ▼
+MySQL Database
+      │
+      ▼
+SQL Analysis
+      │
+      ▼
+Power BI Data Modeling
+      │
+      ▼
+Dashboard Development
+      │
+      ▼
+Business Insights
 ```
 
 ---
 
-## 📊 Skills Demonstrated
+# 🎯 Skills Demonstrated
 
-* SQL
-* Database Management
-* Python Programming
-* Data Cleaning
-* Data Analysis
-* Exploratory Data Analysis
-* Business Analytics
-* Data Visualization
-* Pandas
-* MySQL Integration
-
----
-
-## 🔮 Future Improvements
-
-* Build an interactive dashboard using Power BI or Tableau.
-* Develop predictive models for user engagement.
-* Recommend movies using machine learning.
-* Deploy the analysis as a web application using Streamlit.
+- Data Cleaning
+- Data Wrangling
+- Data Visualization
+- SQL Query Writing
+- Database Management
+- Dashboard Design
+- Business Intelligence
+- ETL Process
+- Power BI
+- Python Programming
 
 ---
 
-## 👨‍💻 Author
+# 🚀 How to Run
 
-**Varnit Mehra**
+### Clone Repository
 
-If you found this project helpful, consider giving the repository a ⭐ on GitHub.
+```bash
+git clone https://github.com/yourusername/yourrepository.git
+```
+
+---
+
+### Install Libraries
+
+```bash
+pip install pandas numpy matplotlib sqlalchemy pymysql
+```
+
+---
+
+### Open Notebook
+
+```bash
+jupyter notebook
+```
+
+---
+
+### Import Dataset
+
+Place datasets inside the Dataset folder.
+
+---
+
+### Execute Notebook
+
+Run all notebook cells.
+
+---
+
+### Open Power BI Dashboard
+
+Open the `.pbix` file in Power BI Desktop.
+
+Refresh the data source if required.
+
+---
+
+# 📷 Dashboard Preview
+
+> Add screenshots inside the Images folder.
+
+Example
+
+```
+Images/
+
+Dashboard1.png
+
+Dashboard2.png
+
+Dashboard3.png
+```
+
+Then display them
+
+```markdown
+## Dashboard
+
+![Dashboard](Images/Dashboard1.png)
+```
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical knowledge of
+
+- Python
+- SQL
+- MySQL
+- Power BI
+- ETL
+- Data Analytics
+- Dashboard Design
+- Business Intelligence
+- Data Visualization
+- Data Cleaning
+
+---
+
+# 🔮 Future Improvements
+
+- Recommendation System
+- Machine Learning Models
+- Sentiment Analysis
+- Forecasting
+- Real-time Dashboard
+- Azure SQL Integration
+- Power BI Service Deployment
+
+---
+
+# 👨‍💻 Author
+
+**Vannu Bhai**
+
+Data Analyst | Power BI | SQL | Python
+
+GitHub: https://github.com/yourusername
+
+LinkedIn: https://linkedin.com/in/yourprofile
+
+---
+
+# ⭐ If you found this project useful
+
+Please consider giving it a ⭐ on GitHub.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙌 Thank You
+
+Thank you for visiting this repository!
+
+Feel free to fork, star, or contribute to improve the project.
