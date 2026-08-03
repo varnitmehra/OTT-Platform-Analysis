@@ -439,27 +439,17 @@ This project demonstrates practical knowledge of
 
 # 👨‍💻 Author
 
-**Vannu Bhai**
+**Varnit Mehra**
 
 Data Analyst | Power BI | SQL | Python
 
-GitHub: https://github.com/yourusername
-
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/varnit-mehra/
 
 ---
 
 # ⭐ If you found this project useful
 
 Please consider giving it a ⭐ on GitHub.
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 ## 🙌 Thank You
 
